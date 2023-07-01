@@ -3,8 +3,12 @@
 Programação Orientada a Objeto em Java - Curso Técnico Senai
 
 
--Encapsulamento
+- Encapsulamento
 
--Herança 
+- Herança 
 
--Polimorfismo
+- Polimorfismo
+
+- Sobrecarga
+
+- Composição
