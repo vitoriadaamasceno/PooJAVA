@@ -1,13 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package televisaoo;
-
-/**
- *
- * @author damascenovi
- */
 public class Televisao {
 
     private boolean ligada;
@@ -20,81 +10,56 @@ public class Televisao {
         this.volume = 0;
     }
 
-    public boolean isLigada() {
-        return ligada;
+
+    public void LigarDesligar() {
+        ligada = !ligada;
     }
 
-    public void setLigada(boolean ligada) {
-        this.ligada = ligada;
+    public boolean isLigada() {
+        return ligada;
     }
 
     public int getCanal() {
         return canal;
     }
 
-    public void setCanal(int canal) {
-        this.canal = canal;
-    }
-
     public int getVolume() {
         return volume;
     }
 
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
 
-    public void Ligar() {
-        ligada = true;
-        System.out.println("A TV esta ligada");
-    }
-
-    public void Desligar() {
-        ligada = false;
-        canal = 1;
-        volume = 0;
-        System.out.println("A TV foi desligada , Volume: " + this.volume + " e no Canal: " + canal);
-    }
-
-    public void AlterarCanal(int canal) {
+    public int AlterarCanal(int canal) {
         switch (canal) {
             case 1:
-                System.out.println("Alterado para canal 1");
-                break;
+        		this.canal = canal;
+                return canal;
             case 3:
-                System.out.println("Alterado para canal 3");
-                break;
+		        this.canal = canal;
+                return canal;
             case 5:
-                System.out.println("Alterado para canal 5");
-                break;
+		        this.canal = canal;
+                return canal;
             case 7:
-                System.out.println("Alterado para canal 7");
-                break;
+		        this.canal = canal;
+                return canal;
             case 11:
-                System.out.println("Alterado para canal 11");
-                break;
+		        this.canal = canal;
+                return canal;
             default:
-                System.out.println("Canal nao existe");
-                break;
+                return -1;
         }
 
     }
     
     public void AumentarVolume(){
-        if(ligada== true){
+        if(ligada== true && volume<100){		
             volume ++;
-            System.out.println("Aumentar volume ++ :" + volume);
-        }else{
-            System.out.println("Tv esta desligada");
         }
     }
     
-        public void DiminuirVolume(){
-        if(ligada== true){
+    public void DiminuirVolume(){
+        if(ligada== true && volume > 0){
             volume --;
-            System.out.println("Diminuir Volume -- :" + volume);
-        }else{
-            System.out.println("Tv esta desligada");
         }
     }
 
